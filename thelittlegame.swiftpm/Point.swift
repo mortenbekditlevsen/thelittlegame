@@ -1,4 +1,7 @@
+#if os(iOS)
 import Foundation
+#endif
+
 struct Point: Equatable {
   var x: Int
   var y: Int

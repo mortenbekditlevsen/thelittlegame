@@ -1,1 +1,1 @@
-thelittlegame.swiftpm/Game.swift
+../thelittlegame.swiftpm/Game.swift
