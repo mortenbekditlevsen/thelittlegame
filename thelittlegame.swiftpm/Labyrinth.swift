@@ -1,5 +1,5 @@
 #if os(iOS)
-    import Foundation
+import Foundation
 #endif
 
 private let labyrinth: [UInt8] = [
@@ -39,11 +39,11 @@ extension Tile {
             switch self {
             case .start:
                 .init(r: 0, g: 16, b: 0)
-            case .end:
+        case .end:
                 .init(r: 16, g: 0, b: 0)
-            case .wall:
+        case .wall:
                 .init(r: 8, g: 0, b: 8)
-            case .space:
+        case .space:
                 .init(r: 2, g: 2, b: 2)
             }
         }
@@ -65,12 +65,6 @@ extension Tile {
 
 }
 
-//   .init(r: 0, g: 16, b: 0)
-// case .end:
-//   .init(r: 16, g: 0, b: 0)
-// case .wall:
-//   .init(r: 2, g: 0, b: 2)
-
 struct Labyrinth {
     let width = 20
     let height = 20
@@ -86,6 +80,7 @@ struct Labyrinth {
 func createLabyrinthLevel() -> Level {
     let labyrinth = Labyrinth()
     var player = Point(x: 1, y: 1)
+    
     let labyrinthLevel: Level = .init { screen, time in
         // Time is in seconds
         var t = fmodf(Float(time), 1)
@@ -106,7 +101,7 @@ func createLabyrinthLevel() -> Level {
                 let p = Point(x: x, y: y)
                 let transformed = (p + player) - center
                 let tile = labyrinth.getTile(transformed)
-
+                
                 if p == center {
                     let color = Color(
                         r: tile.color.r, g: tile.color.g, b: max(UInt8(8 + t * 8), tile.color.b))
@@ -127,9 +122,7 @@ func createLabyrinthLevel() -> Level {
             next.y += 1
         case .down:
             next.y -= 1
-        case .fire:
-            toggleLed = !toggleLed
-        case .select:
+        case .fire, .select:
             ()
         }
         let tile = labyrinth.getTile(next)
@@ -137,6 +130,6 @@ func createLabyrinthLevel() -> Level {
             player = next
         }
     }
-
+    
     return labyrinthLevel
 }
