@@ -36,7 +36,24 @@ struct ContentView: View {
     let viewModel: ViewModel
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
+            HStack {
+                Spacer(minLength: 0)
+                    .frame(width: 30, height: 30)
+                    .background(.red.opacity(viewModel.screen.red))
+                    .foregroundColor(.black)
+                    .clipShape(.circle)
+                    .padding(4)
+                Spacer()
+                Spacer(minLength: 0)
+                    .frame(width: 30, height: 30)
+                    .background(.blue.opacity(viewModel.screen.blue))
+                    .foregroundColor(.black)
+                    .clipShape(.circle)
+                    .padding(4)
+            }
+            .background(SwiftUI.Color(white: 0.2))
+            .clipShape(.rect(cornerRadii: .init(topLeading: 5,  topTrailing: 5)))
             VStack(spacing: 2) {
                 ForEach(0 ..< 6, id: \.self) { y in
                     HStack(spacing: 2) {
@@ -45,7 +62,6 @@ struct ContentView: View {
                                 .frame(width: 38, height: 38)
                                 .background(viewModel.screen.get(x: x, y: 5 - y).swiftUI)
                                 .foregroundColor(.black)
-                            
                                 .clipShape(.buttonBorder)
                         }    
                     }    
@@ -53,7 +69,8 @@ struct ContentView: View {
             }
             .padding(10)
             .background(.black)
-            .clipShape(.rect(cornerRadii: .init(topLeading: 5, bottomLeading: 5, bottomTrailing: 5, topTrailing: 5)))
+            .clipShape(.rect(cornerRadii: .init(bottomLeading: 5, bottomTrailing: 5)))
+            .padding(.bottom, 10)
             
             HStack {
                 VStack {
