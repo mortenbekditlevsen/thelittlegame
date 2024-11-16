@@ -91,40 +91,36 @@ struct Image {
 }
 
 let catImage = Image(buffer: cat, palette: Palette(colors: [
-    .init(r: 16, g: 8, b: 0),
-    .init(r: 5, g: 16, b: 5),
-    .init(r: 16, g: 8, b: 12),
-    .init(r: 16, g: 0, b: 0),
+    .orange,
+    .lightGreen,
+    .pink,
 ]))
 
 let rabbitImage = Image(buffer: rabbit, palette: Palette(colors: [
-    .init(r: 16, g: 16, b: 16),
-    .init(r: 5, g: 5, b: 16),
-    .init(r: 16, g: 8, b: 12),
-    .init(r: 16, g: 0, b: 0)
+    .lightWhite,
+    .blue,
+    .pink,
 ]))
 
 let unicornImage = Image(buffer: unicorn, palette: Palette(colors: [
-    .init(r: 16, g: 16, b: 16),
-    .init(r: 5, g: 5, b: 16),
-    .init(r: 16, g: 8, b: 12),
-    .init(r: 16, g: 0, b: 0)
+    .lightWhite,
+    .blue,
+    .pink,
 ]))
 
 let pandaImage = Image(buffer: panda, palette: Palette(colors: [
-    .init(r: 16, g: 16, b: 16),
-    .init(r: 10, g: 10, b: 16),
-    .init(r: 16, g: 8, b: 12),
-    .init(r: 16, g: 0, b: 0)
+    .lightWhite,
+    .lightBlue,
+    .pink,
 ]))
 
 let heartImage = Image(buffer: heart, palette: Palette(colors: [
-    .init(r: 16, g: 0, b: 0),
+    .red
 ]))
 
 let carrotImage = Image(buffer: carrot, palette: Palette(colors: [
-    .init(r: 16, g: 8, b: 0),
-    .init(r: 0, g: 16, b: 0),
+    .orange,
+    .green,
 ]))
 
 let cakeImage = Image(buffer: carrot, palette: Palette(colors: [
@@ -149,7 +145,6 @@ enum PetType: Int {
         case .cat: catImage
         case .rabbit: rabbitImage
         case .panda: pandaImage
-     //   case .heart: heartImage
         case .unicorn: unicornImage
         }
     }
