@@ -45,6 +45,7 @@ struct ContentView: View {
                     .clipShape(.circle)
                     .padding(4)
                 Spacer()
+                    .frame(width: 342)
                 Spacer(minLength: 0)
                     .frame(width: 30, height: 30)
                     .background(.blue.opacity(viewModel.screen.blue))
