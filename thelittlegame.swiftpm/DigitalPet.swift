@@ -120,7 +120,7 @@ struct Image {
 
 let catImage = Image(buffer: cat, palette: Palette(colors: [
     .orange,
-    .lightGreen,
+    .green,
     .pink,
 ]))
 
@@ -154,7 +154,7 @@ let carrotImage = Image(buffer: carrot, palette: Palette(colors: [
 let icecreamImage = Image(buffer: icecream, palette: Palette(colors: [
     .orange,
     .pink,
-    .init(r: 8, g: 0, b: 8),
+    .init(r: 4, g: 0, b: 4),
 ]))
 
 let fishImage = Image(buffer: fish, palette: Palette(colors: [
