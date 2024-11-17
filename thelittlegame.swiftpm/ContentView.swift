@@ -15,7 +15,7 @@ final class ViewModel {
                 createLabyrinthLevel(),
                 createDigitalPetLevel(),
             ],
-            currentLevel: 1
+            currentLevel: 0
     
         )
         self.timer = Timer.publish(every: 1/30, on: .main, in: .common).autoconnect()

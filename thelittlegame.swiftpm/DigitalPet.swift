@@ -154,7 +154,7 @@ let carrotImage = Image(buffer: carrot, palette: Palette(colors: [
 let icecreamImage = Image(buffer: icecream, palette: Palette(colors: [
     .orange,
     .pink,
-    .init(r: 4, g: 0, b: 4),
+    .purple,
 ]))
 
 let fishImage = Image(buffer: fish, palette: Palette(colors: [
