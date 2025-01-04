@@ -6,6 +6,7 @@ func app_main() {
     levels: [
       createLabyrinthLevel(),
       createDigitalPetLevel(),
+      createMemoryLevel()
     ]
   )
 

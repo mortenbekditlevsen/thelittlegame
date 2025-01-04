@@ -77,6 +77,23 @@ let fish: [Int] = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ]
 
+let poo: [Int] = [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+    0, 0, 0, 1, 1, 1, 1, 0, 0, 0,
+    0, 0, 1, 1, 1, 1, 1, 1, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+]
+
+let exclamationMark: [Int] = [
+    0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+]
 
 struct Size {
     let width: Int
@@ -135,6 +152,11 @@ let unicornImage = Image(buffer: unicorn, palette: Palette(colors: [
     .blue,
     .pink,
 ]))
+
+let pooImage = Image(buffer: poo, palette: Palette(colors: [
+    .init(r: 8, g: 5, b: 0),
+]))
+
 
 let pandaImage = Image(buffer: panda, palette: Palette(colors: [
     .lightWhite,

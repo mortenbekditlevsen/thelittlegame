@@ -73,4 +73,5 @@ target_sources(${COMPONENT_LIB}
     DigitalPet.swift
     Game.swift
     Led.swift
+    Memory.swift
 )
