@@ -1,6 +1,8 @@
 # thelittlegame
 Experiments with embedded Swift on an ESP32C6
 
+![The little game](assets/thelittlegame.jpeg)
+
 I started with the ESP32C6 from Seeedstudio + the 6x10 LED matrix
 
 My daughter (aged 7) thought that it was fun to program the LEDs, so we decided to make a game.
@@ -10,6 +12,8 @@ I found some buttons I had lying around - 4 that we could use for directional bu
 Then I found two other LEDs, a red and a blue one.
 
 I soldered it all on to a bread board (I'm pretty bad at soldering) and 3d-printed a case for the game.
+
+![The little game - inside](assets/thelittlegame_inside.jpeg)
 
 We still need to add batteries. The LED matrix requires 5V. I added a voltage regulator that can take 6V as input (two CR2032). The ESP32C6 doesn't have a 5V battery input - 5V usually only comes when you power it through USB. But it appears, that if you put 5V on the place where the ESP usually delivers 5V (when USB is connected), then it appears to work.
 
@@ -29,3 +33,12 @@ To build:
 export TOOLCHAINS=org.swift.600202408131a
 idf.py build
 ```
+
+Here's the game in action:
+
+![The little game - movie](assets/thelittlegame.mov)
+
+
+
+Uploading thelittlegame2.mov…
+
