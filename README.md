@@ -36,9 +36,5 @@ idf.py build
 
 Here's the game in action:
 
-![The little game - movie](assets/thelittlegame.mov)
-
-
-
-Uploading thelittlegame2.mov…
+https://github.com/user-attachments/assets/9859cd54-89d6-4cd9-b803-3f3a03b4566d
 
